@@ -9,10 +9,10 @@ server.on('listening', function(){
   console.log("server is actually running");
 });
 
-server.listen(8080); //listen on port 8080
+server.listen(8888); //listen on port 8080
 
 function onRequest(request, response){
   var  path = url.parse(request.url).pathname;
   console.log("pathname" + path);
-  render.renderLaunchPage(response, path);
+  render.renderLaunchPage(request, response, path);
 }
